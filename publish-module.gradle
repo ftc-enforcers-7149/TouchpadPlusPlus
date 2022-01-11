@@ -1,0 +1,76 @@
+apply plugin: 'maven-publish'
+apply plugin: 'signing'
+
+task androidSourcesJar(type: Jar) {
+    archiveClassifier.set('sources')
+    if (project.plugins.findPlugin("com.android.library")) {
+        // For Android libraries
+        from android.sourceSets.main.java.srcDirs
+        from android.sourceSets.main.kotlin.srcDirs
+    } else {
+        // For pure Kotlin libraries, in case you have them
+        from sourceSets.main.java.srcDirs
+        from sourceSets.main.kotlin.srcDirs
+    }
+}
+
+artifacts {
+    archives androidSourcesJar
+    //archives javadocJar
+}
+
+group = PUBLISH_GROUP_ID
+version = PUBLISH_VERSION
+
+afterEvaluate {
+    publishing {
+        publications {
+            release(MavenPublication) {
+                groupId PUBLISH_GROUP_ID
+                artifactId PUBLISH_ARTIFACT_ID
+                version PUBLISH_VERSION
+
+                // Two artifacts, the `aar` (or `jar`) and the sources
+                if (project.plugins.findPlugin("com.android.library")) {
+                    from components.release
+                } else {
+                    from components.java
+                }
+
+                //artifact androidSourcesJar
+                //artifact javadocJar
+
+                pom {
+
+                    name = archivesBaseName
+                    description = 'Simple library that adds functionality to First Tech Challenge implementation of the PS4 Dualshock Touchpad'
+                    url = 'https://github.com/ftc-enforcers-7149/TouchpadPlusPlus'
+
+                    licenses {
+                        license {
+                            name = 'The Apache License, Version 2.0'
+                            url = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+                        }
+                    }
+
+                    developers {
+                        developer {
+                            id = 'novabansal'
+                            name = 'Nova Bansal'
+                            email = 'novab@ehtpal.org'
+                        }
+                    }
+                    scm {
+                        url = 'https://github.com/ftc-enforcers-7149/TouchpadPlusPlus'
+                        connection = 'scm:git:https://github.com/ftc-enforcers-7149/TouchpadPlusPlus.git'
+                        developerConnection = 'scm:git:ssh://github.com/ftc-enforcers-7149/TouchpadPlusPlus.git'
+                    }
+                }
+            }
+        }
+    }
+}
+
+signing {
+    sign publishing.publications
+}

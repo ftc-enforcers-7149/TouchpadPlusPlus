@@ -4,6 +4,7 @@
 
 # GPG files
 *.gpg
+*.pgp
 
 # Files for the ART/Dalvik VM
 *.dex

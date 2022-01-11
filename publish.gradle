@@ -1,7 +1,42 @@
-apply plugin: 'com.android.library'
+/*apply plugin: 'com.android.library'
 apply plugin: 'maven-publish'
-apply plugin: 'signing'
+apply plugin: 'signing'*/
 
+ext["signing.keyId"] = ''
+ext["signing.password"] = ''
+ext["signing.key"] = ''
+ext["ossrhUsername"] = ''
+ext["ossrhPassword"] = ''
+ext["sonatypeStagingProfileId"] = ''
+
+File secretPropsFile = project.rootProject.file('local.properties')
+if (secretPropsFile.exists()) {
+    // Read local.properties file first if it exists
+    Properties p = new Properties()
+    new FileInputStream(secretPropsFile).withCloseable { is -> p.load(is) }
+    p.each { name, value -> ext[name] = value }
+} else {
+    ext["signing.keyId"] = System.getenv('OPENFTC_GPG_KEY_ID')
+    ext["signing.password"] = System.getenv('OPENFTC_GPG_KEY_PASSWORD')
+    ext["signing.secretKeyRingFile"] = System.getenv('OPENFTC_GPG_KEY_FILE')
+    ext["ossrhUsername"] = System.getenv('OPENFTC_SONATYPE_USER')
+    ext["ossrhPassword"] = System.getenv('OPENFTC_SONATYPE_PASSWORD')
+}
+
+// Set up Sonatype repository
+nexusPublishing {
+    repositories {
+        sonatype {
+            stagingProfileId = sonatypeStagingProfileId
+            username = ossrhUsername
+            password = ossrhPassword
+            nexusUrl.set(uri("https://s01.oss.sonatype.org/service/local/"))
+            snapshotRepositoryUrl.set(uri("https://s01.oss.sonatype.org/content/repositories/snapshots/"))
+        }
+    }
+}
+
+/*
 group = "io.github.ftc-enforcers-7149"
 archivesBaseName = "touchpadplusplus"
 
@@ -60,4 +95,4 @@ afterEvaluate {
         }
 
     }
-}
+}*/
