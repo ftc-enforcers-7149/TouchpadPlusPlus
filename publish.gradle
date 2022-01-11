@@ -1,0 +1,63 @@
+apply plugin: 'com.android.library'
+apply plugin: 'maven-publish'
+apply plugin: 'signing'
+
+group = "io.github.ftc-enforcers-7149"
+archivesBaseName = "touchpadplusplus"
+
+afterEvaluate {
+    publishing {
+        publications {
+            release(MavenPublication) {
+
+                groupId = group
+                artifactId = archivesBaseName
+                version = "0.5.0"
+
+                pom {
+
+                    name = archivesBaseName
+                    description = 'Simple library that adds functionality to First Tech Challenge implementation of the PS4 Dualshock Touchpad'
+                    url = 'https://github.com/ftc-enforcers-7149/TouchpadPlusPlus'
+
+                    licenses {
+                        license {
+                            name = 'The Apache License, Version 2.0'
+                            url = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+                        }
+                    }
+
+                    developers {
+                        developer {
+                            id = 'novabansal'
+                            name = 'Nova Bansal'
+                            email = 'novab@ehtpal.org'
+                        }
+                    }
+
+                    scm {
+                        url = 'https://github.com/ftc-enforcers-7149/TouchpadPlusPlus'
+                        connection = 'scm:https://github.com/ftc-enforcers-7149/TouchpadPlusPlus.git'
+                    }
+                }
+            }
+        }
+
+        repositories {
+            maven {
+                name = "mavencentral"
+
+                def releasesRepoUrl = "https://oss.sonatype.org/service/local/staging/deploy/maven2/"
+                def snapshotsRepoUrl = "https://oss.sonatype.org/content/repositories/snapshots/"
+
+                url = version.endsWith('SNAPSHOT') ? snapshotsRepoUrl : releasesRepoUrl
+
+                credentials {
+                    username ossrhUsername
+                    password ossrhPassword
+                }
+            }
+        }
+
+    }
+}
