@@ -11,7 +11,7 @@ public class Touchpad implements Updateable {
 
     //TODO: fix angle handling
 
-    // Gamepad for handling input
+    // Gamepad for handling input!
     private final Gamepad gamepad;
 
     // touchButton: touchpad "press"
