@@ -9,7 +9,7 @@ public class Button extends TouchObject<Boolean> {
 
     private final Bounds bounds;
     private final boolean requireClick;
-
+    //h
     public Button(Touchpad touchpad, boolean defaultValue, double leftX, double rightX, double bottomY, double topY, boolean requireClick) {
         super(touchpad, defaultValue);
         bounds = new RectBounds(leftX, rightX, bottomY, topY);
