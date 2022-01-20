@@ -1,6 +1,6 @@
-package com.enforcers7149.touchpadplusplus.src.Utils.Bounds;
+package Utils.Bounds;
 
-import com.enforcers7149.touchpadplusplus.src.Utils.Point;
+import Utils.Point;
 
 import java.util.ArrayList;
 import java.util.Arrays;

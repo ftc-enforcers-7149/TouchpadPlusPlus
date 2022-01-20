@@ -1,7 +1,7 @@
-package com.enforcers7149.touchpadplusplus.src.TouchObjects;
+package TouchObjects;
 
-import com.enforcers7149.touchpadplusplus.src.Touchpad;
-import com.enforcers7149.touchpadplusplus.src.Utils.Scale;
+import Utils.Touchpad;
+import Utils.Scale;
 
 public abstract class ScaledTouchObject<T> extends TouchObject<T> {
 

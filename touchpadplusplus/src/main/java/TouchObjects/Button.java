@@ -1,9 +1,9 @@
-package com.enforcers7149.touchpadplusplus.src.TouchObjects;
+package TouchObjects;
 
 
-import com.enforcers7149.touchpadplusplus.src.Touchpad;
-import com.enforcers7149.touchpadplusplus.src.Utils.Bounds.Bounds;
-import com.enforcers7149.touchpadplusplus.src.Utils.Bounds.RectBounds;
+import Utils.Touchpad;
+import Utils.Bounds.Bounds;
+import Utils.Bounds.RectBounds;
 
 public class Button extends TouchObject<Boolean> {
 

@@ -1,10 +1,10 @@
-package com.enforcers7149.touchpadplusplus.src.TouchObjects;
+package TouchObjects;
 
-import com.enforcers7149.touchpadplusplus.src.Touchpad;
-import com.enforcers7149.touchpadplusplus.src.Utils.Bounds.Bounds;
-import com.enforcers7149.touchpadplusplus.src.Utils.Bounds.RectBounds;
-import com.enforcers7149.touchpadplusplus.src.Utils.Point;
-import com.enforcers7149.touchpadplusplus.src.Utils.Touch;
+import Utils.Touchpad;
+import Utils.Bounds.Bounds;
+import Utils.Bounds.RectBounds;
+import Utils.Point;
+import Utils.Touch;
 
 import org.firstinspires.ftc.robotcore.external.navigation.AngleUnit;
 

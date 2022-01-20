@@ -1,10 +1,9 @@
-package com.enforcers7149.touchpadplusplus.src.TouchObjects;
+package TouchObjects;
 
 
-import com.enforcers7149.touchpadplusplus.src.Touchpad;
-import com.enforcers7149.touchpadplusplus.src.Utils.Bounds.Bounds;
-import com.enforcers7149.touchpadplusplus.src.Utils.Bounds.PolygonBounds;
-import com.enforcers7149.touchpadplusplus.src.Utils.Point;
+import Utils.Touchpad;
+import Utils.Bounds.Bounds;
+import Utils.Point;
 
 public class Snapback extends Slider {
 

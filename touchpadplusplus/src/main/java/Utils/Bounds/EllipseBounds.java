@@ -1,8 +1,6 @@
-package com.enforcers7149.touchpadplusplus.src.Utils.Bounds;
+package Utils.Bounds;
 
-import com.enforcers7149.touchpadplusplus.src.Utils.Point;
-
-import org.firstinspires.ftc.robotcore.external.navigation.AngleUnit;
+import Utils.Point;
 
 public class EllipseBounds extends Bounds {
 

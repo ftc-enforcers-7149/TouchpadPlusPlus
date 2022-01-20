@@ -1,8 +1,8 @@
-package com.enforcers7149.touchpadplusplus.src.Utils.Bounds;
+package Utils.Bounds;
 
-import static com.enforcers7149.touchpadplusplus.src.Touchpad.COORD_MULT;
+import static Utils.Touchpad.COORD_MULT;
 
-import com.enforcers7149.touchpadplusplus.src.Utils.Point;
+import Utils.Point;
 
 public class CircleBounds extends Bounds {
 

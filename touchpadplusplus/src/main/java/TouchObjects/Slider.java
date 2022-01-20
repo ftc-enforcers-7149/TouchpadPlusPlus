@@ -1,11 +1,10 @@
-package com.enforcers7149.touchpadplusplus.src.TouchObjects;
+package TouchObjects;
 
-import com.enforcers7149.touchpadplusplus.src.Touchpad;
-import com.enforcers7149.touchpadplusplus.src.Utils.Bounds.Bounds;
-import com.enforcers7149.touchpadplusplus.src.Utils.Bounds.PolygonBounds;
-import com.enforcers7149.touchpadplusplus.src.Utils.Bounds.RectBounds;
-import com.enforcers7149.touchpadplusplus.src.Utils.Point;
-import com.enforcers7149.touchpadplusplus.src.Utils.Scale;
+import Utils.Touchpad;
+import Utils.Bounds.Bounds;
+import Utils.Bounds.RectBounds;
+import Utils.Point;
+import Utils.Scale;
 
 //IMPORTANT PLEASE DONT SET VALUE TO 0 AUTOMATICALLY IN THIS CLASS THATS WHAT SNAPBACK IS FOR!
 public class Slider extends ScaledTouchObject<Double> {

@@ -1,4 +1,4 @@
-package com.enforcers7149.touchpadplusplus.src.Utils;
+package Utils;
 
 import androidx.annotation.NonNull;
 

@@ -1,20 +1,20 @@
 package com.example.touchpadlib7149;
 
-import com.enforcers7149.touchpadplusplus.src.TouchObjects.Button;
-import com.enforcers7149.touchpadplusplus.src.TouchObjects.Slider;
-import com.enforcers7149.touchpadplusplus.src.TouchObjects.Snapback;
-import com.enforcers7149.touchpadplusplus.src.TouchObjects.Swipe;
-import com.enforcers7149.touchpadplusplus.src.Touchpad;
-import com.enforcers7149.touchpadplusplus.src.Utils.Bounds.PolygonBounds;
-import com.enforcers7149.touchpadplusplus.src.Utils.Bounds.RectBounds;
-import com.enforcers7149.touchpadplusplus.src.Utils.Point;
-import com.enforcers7149.touchpadplusplus.src.Utils.TouchpadHandler;
+import TouchObjects.Button;
+import TouchObjects.Slider;
+import TouchObjects.Snapback;
+import TouchObjects.Swipe;
+import Utils.Touchpad;
+import Utils.Bounds.PolygonBounds;
+import Utils.Bounds.RectBounds;
+import Utils.Point;
+import Utils.TouchpadHandler;
 import com.qualcomm.robotcore.eventloop.opmode.OpMode;
 import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 
 import org.firstinspires.ftc.robotcore.external.navigation.AngleUnit;
 
-@TeleOp(group = "7149 Touchpad++ Samples", name = "Touchpad Test")
+@TeleOp(group = "7149 Utils.Touchpad++ Samples", name = "Utils.Touchpad Test")
 public class TouchpadTest extends OpMode {
 
     Touchpad touchpad;

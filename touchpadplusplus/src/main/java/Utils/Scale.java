@@ -1,4 +1,4 @@
-package com.enforcers7149.touchpadplusplus.src.Utils;
+package Utils;
 
 public class Scale {
 

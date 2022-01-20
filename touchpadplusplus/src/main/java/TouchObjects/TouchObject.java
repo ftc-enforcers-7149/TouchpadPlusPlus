@@ -1,7 +1,7 @@
-package com.enforcers7149.touchpadplusplus.src.TouchObjects;
+package TouchObjects;
 
-import com.enforcers7149.touchpadplusplus.src.Touchpad;
-import com.enforcers7149.touchpadplusplus.src.Utils.Updateable;
+import Utils.Touchpad;
+import Utils.Updateable;
 
 
 public abstract class TouchObject<T> implements Updateable {

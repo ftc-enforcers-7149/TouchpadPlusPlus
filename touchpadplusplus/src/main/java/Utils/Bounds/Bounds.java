@@ -1,7 +1,7 @@
-package com.enforcers7149.touchpadplusplus.src.Utils.Bounds;
+package Utils.Bounds;
 
 
-import com.enforcers7149.touchpadplusplus.src.Utils.Point;
+import Utils.Point;
 
 public abstract class Bounds {
     // Bounding box variables

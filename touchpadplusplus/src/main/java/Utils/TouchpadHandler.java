@@ -1,4 +1,4 @@
-package com.enforcers7149.touchpadplusplus.src.Utils;
+package Utils;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -8,6 +8,8 @@ public class TouchpadHandler {
     private ArrayList<Updateable> objects;
 
     public TouchpadHandler(Updateable... updateables) {
+
+        objects = new ArrayList<Updateable>();
         addInputs(updateables);
     }
 
