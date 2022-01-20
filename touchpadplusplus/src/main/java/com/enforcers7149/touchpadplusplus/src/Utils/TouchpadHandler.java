@@ -8,6 +8,8 @@ public class TouchpadHandler {
     private ArrayList<Updateable> objects;
 
     public TouchpadHandler(Updateable... updateables) {
+
+        objects = new ArrayList<Updateable>();
         addInputs(updateables);
     }
 
