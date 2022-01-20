@@ -1,11 +1,11 @@
-package com.enforcers7149.touchpadplusplus.src;
+package Utils;
 
-import com.enforcers7149.touchpadplusplus.src.Utils.Touch;
-import com.enforcers7149.touchpadplusplus.src.Utils.Updateable;
+import Utils.Touch;
+import Utils.Updateable;
 
 import com.qualcomm.robotcore.hardware.Gamepad;
 
-import com.enforcers7149.touchpadplusplus.src.Utils.Point;
+import Utils.Point;
 
 public class Touchpad implements Updateable {
 
